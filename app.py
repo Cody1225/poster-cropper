@@ -39,7 +39,7 @@ if uploaded_file is not None:
     # 定義旋轉矩形 (中心, 尺寸, 角度)
     rect = ((center_x, center_y), (crop_w, crop_h), angle)
     box = cv2.boxPoints(rect)
-    box = np.int0(box)
+    box = np.int64(box)
 
     # 製作預覽圖
     display_max_width = 1000
